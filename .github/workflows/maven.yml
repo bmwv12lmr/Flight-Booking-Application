@@ -26,3 +26,5 @@ jobs:
       run: mvn compile
     - name: Install Maven
       run: mvn clean install
+    - name: Execute Maven
+      run: mvn exec:java -Dexec.mainClass=test.RunClient -Dexec.args="src/test/data/Sample.csv src/test/data/flights.csv src/test/play_ground/test.csv src/test/play_ground/test.txt"
