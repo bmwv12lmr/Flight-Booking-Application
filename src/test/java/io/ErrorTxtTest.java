@@ -28,7 +28,6 @@ class ErrorTxtTest {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
         assertTrue(fileObj.delete());
     }
 }
