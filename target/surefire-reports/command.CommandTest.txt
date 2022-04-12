@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: command.ErrorTxtInitializerTest
+Test set: command.CommandTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in command.ErrorTxtInitializerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in command.CommandTest

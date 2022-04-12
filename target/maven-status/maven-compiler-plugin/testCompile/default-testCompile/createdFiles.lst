@@ -1,12 +1,17 @@
 chainofresponsibility/CreditCardCheckerTest.class
 io/SuccessCSVTest.class
 command/BookingCSVInitializerTest.class
+command/CommandTest$1.class
 command/InvokerTest.class
 chainofresponsibility/PriceCalculatorTest.class
 singleton/FlightDBTest.class
+chainofresponsibility/AgentTest.class
+chainofresponsibility/AgentTest$1.class
+chainofresponsibility/AgentTest$2.class
 io/ErrorTxtTest.class
 command/ErrorTxtInitializerTest.class
 command/SuccessCSVInitializerTest.class
+command/CommandTest.class
 chainofresponsibility/FlightCheckerTest.class
 command/DBInitializerTest.class
 chainofresponsibility/FlightBookerTest.class

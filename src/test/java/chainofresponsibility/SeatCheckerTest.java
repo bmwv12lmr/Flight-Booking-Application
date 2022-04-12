@@ -28,21 +28,12 @@ class SeatCheckerTest {
         assertTrue(seatChecker.endSuccess);
 
 
-        String fileName = "error_" + System.currentTimeMillis() + ".txt";
-
-        File fileObj = new File("src/test/play_ground/" + fileName);
-        if (fileObj.exists()) {
-            assertTrue(fileObj.delete());
-        }
+        File fileObj = new File("src/test/play_ground/test.txt");
         ErrorTxt.setFilePath(fileObj.getPath());
 
         data.numberOfSeat = 100;
 
         seatChecker.handleRequest(data);
         assertFalse(seatChecker.endSuccess);
-
-        if (fileObj.exists()) {
-            assertTrue(fileObj.delete());
-        }
     }
 }
