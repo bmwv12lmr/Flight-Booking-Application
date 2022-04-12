@@ -22,6 +22,10 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: maven
+    - name: Setup Symfony
+      run: |
+          pwd
+          echo "Hello World"
     - name: Compile and Build Maven
       run: mvn compile
     - name: Install Maven
