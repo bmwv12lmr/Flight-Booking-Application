@@ -9,12 +9,11 @@ public class SeatChecker extends Agent {
     }
     @Override
     public void handleRequest(CustomerData customerData) {
-        FlightDB obj = FlightDB.getInstance();
-        if(obj.checkSeatAvail(customerData.flightNumber, customerData.seatCategory, customerData.numberOfSeat)) {
+        FlightDB.getInstance();
+        if(FlightDB.checkSeatAvail(customerData.flightNumber, customerData.seatCategory, customerData.numberOfSeat)) {
             getNext().handleRequest(customerData);
         } else {
             this.leaveFailed(customerData.bookingName);
         }
     }
-
 }

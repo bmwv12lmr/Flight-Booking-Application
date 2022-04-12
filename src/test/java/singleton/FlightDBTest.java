@@ -1,16 +1,42 @@
 package singleton;
 
-public class FlightDBTest {
-    public static void main(String[] args) {
-        FlightDB.setFilePath("/Users/yswu/IdeaProjects/IndividualProject/src/test/flights.csv");
-        FlightDB obj = FlightDB.getInstance();
-        System.out.println("Test Flight SJ456: " + obj.checkFlightExist("SJ456"));
-        System.out.println("Test Flight 999: " + obj.checkFlightExist("999"));
-        System.out.println("Test Seat: " + obj.checkSeatAvail("SJ456","Economy", 10 ));
-        System.out.println("Test Seat: " + obj.checkSeatAvail("BY110", "Premium Economy", 5));
-        System.out.println("Test calculatePrice: " + obj.calculatePrice("BY110", "Premium Economy", 5));
-        System.out.println("Test bookFlight");
-        obj.bookFlight("BY110", "Premium Economy", 5);
-        System.out.println("Test Seat: " + obj.checkSeatAvail("BY110", "Premium Economy", 5));
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class FlightDBTest {
+
+    void init() {
+        FlightDB.setFilePath("src/test/data/flights.csv");
+        FlightDB.getInstance();
+    }
+
+    @Test
+    void checkFlightExist() {
+        init();
+        assertTrue(FlightDB.checkFlightExist("SJ456"));
+        assertFalse(FlightDB.checkFlightExist("CB123"));
+    }
+
+    @Test
+    void checkSeatAvail() {
+        init();
+        assertTrue(FlightDB.checkSeatAvail("BY110", "Premium Economy", 5));
+        assertFalse(FlightDB.checkSeatAvail("SJ456","Economy", 10 ));
+    }
+
+    @Test
+    void calculatePrice() {
+        init();
+        assertEquals(2500, FlightDB.calculatePrice("BY110", "Premium Economy", 5));
+    }
+
+    @Test
+    void bookFlight() {
+        init();
+        assertTrue(FlightDB.checkSeatAvail("BY110", "Premium Economy", 5));
+        FlightDB.bookFlight("BY110", "Premium Economy", 5);
+        assertFalse(FlightDB.checkSeatAvail("BY110", "Premium Economy", 5));
     }
 }
