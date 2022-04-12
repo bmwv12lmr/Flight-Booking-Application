@@ -1,7 +1,7 @@
 # Individual Project: Flight Booking Application  
-*CMPE-202: SW Systems Engr Spring, 2022*  
-Professor: Gopinath Vinodh  
-Student: Allen Wu  
+*[Spring '22] CMPE-202: Software Systems Engineering*  
+**Professor: Gopinath Vinodh**  
+**Student: Allen Wu**  
 
 ## Objective
 Build a Flight Booking Application to help a list of customers booking flight tickets.
