@@ -14,9 +14,6 @@ class SuccessCSVTest {
     @Test
     void write() {
         File fileObj = new File("src/test/play_ground/test.csv");
-        if (fileObj.exists()) {
-            assertTrue(fileObj.delete());
-        }
         SuccessCSV.setFilePath(fileObj.getPath());
         CustomerData testData1 = new CustomerData();
         testData1.bookingName = "Sam";
@@ -42,6 +39,5 @@ class SuccessCSVTest {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        assertTrue(fileObj.delete());
     }
 }

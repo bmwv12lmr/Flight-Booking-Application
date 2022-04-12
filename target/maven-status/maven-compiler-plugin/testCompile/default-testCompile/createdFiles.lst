@@ -1,5 +1,16 @@
+chainofresponsibility/CreditCardCheckerTest.class
 io/SuccessCSVTest.class
+command/BookingCSVInitializerTest.class
+command/InvokerTest.class
+chainofresponsibility/PriceCalculatorTest.class
+singleton/FlightDBTest.class
 io/ErrorTxtTest.class
+command/ErrorTxtInitializerTest.class
+command/SuccessCSVInitializerTest.class
+chainofresponsibility/FlightCheckerTest.class
+command/DBInitializerTest.class
+chainofresponsibility/FlightBookerTest.class
+command/FileHandlerTest.class
 io/FlightCSVTest.class
 io/BookingCSVTest.class
-singleton/FlightDBTest.class
+chainofresponsibility/SeatCheckerTest.class

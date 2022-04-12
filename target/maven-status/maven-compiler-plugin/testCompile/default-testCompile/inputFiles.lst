@@ -1,5 +1,16 @@
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/chainofresponsibility/SeatCheckerTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/command/BookingCSVInitializerTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/chainofresponsibility/FlightCheckerTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/command/SuccessCSVInitializerTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/chainofresponsibility/FlightBookerTest.java
 /Users/yswu/IdeaProjects/IndividualProject/src/test/java/io/BookingCSVTest.java
 /Users/yswu/IdeaProjects/IndividualProject/src/test/java/io/FlightCSVTest.java
 /Users/yswu/IdeaProjects/IndividualProject/src/test/java/io/ErrorTxtTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/command/FileHandlerTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/command/ErrorTxtInitializerTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/chainofresponsibility/CreditCardCheckerTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/command/InvokerTest.java
 /Users/yswu/IdeaProjects/IndividualProject/src/test/java/io/SuccessCSVTest.java
 /Users/yswu/IdeaProjects/IndividualProject/src/test/java/singleton/FlightDBTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/chainofresponsibility/PriceCalculatorTest.java
+/Users/yswu/IdeaProjects/IndividualProject/src/test/java/command/DBInitializerTest.java

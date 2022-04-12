@@ -9,6 +9,6 @@ public class DBInitializer extends Command{
     @Override
     public void execute() {
         FlightDB.setFilePath(fileHandler.action());
-        FlightDB obj = FlightDB.getInstance();
+        FlightDB.getInstance();
     }
 }

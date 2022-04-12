@@ -14,12 +14,12 @@ public class SuccessCSV {
     private SuccessCSV() {
         File newFile = new File(filePath);
         try {
-            if (newFile.createNewFile()) {
-                fileHandler = new FileWriter(filePath);
-                fileHandler.write("Booking name, flight number, Category, number of seats booked, total price\n");
-                fileHandler.flush();
-            } else {
-                System.out.println("Error: File already exists.");
+            if (!newFile.exists() || newFile.delete()) {
+                if (newFile.createNewFile()) {
+                    fileHandler = new FileWriter(filePath);
+                    fileHandler.write("Booking name, flight number, Category, number of seats booked, total price\n");
+                    fileHandler.flush();
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

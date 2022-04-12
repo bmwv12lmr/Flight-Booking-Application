@@ -5,14 +5,20 @@ import singleton.FlightDB;
 
 public class PriceCalculator extends Agent {
     public PriceCalculator() {
+        this.agentName = "PriceCalculator";
         this.reason = "invalid price number";
     }
     @Override
     public void handleRequest(CustomerData customerData) {
-        FlightDB obj = FlightDB.getInstance();
-        customerData.totalPrice = obj.calculatePrice(customerData.flightNumber, customerData.seatCategory, customerData.numberOfSeat);
+        endSuccess = false;
+        FlightDB.getInstance();
+        customerData.totalPrice = FlightDB.calculatePrice(customerData.flightNumber, customerData.seatCategory, customerData.numberOfSeat);
         if(customerData.totalPrice != -1) {
-            getNext().handleRequest(customerData);
+            if (getNext() != null) {
+                getNext().handleRequest(customerData);
+            }else {
+                leaveSuccess();
+            }
         } else {
             this.leaveFailed(customerData.bookingName);
         }

@@ -5,10 +5,14 @@ import singleton.FlightDB;
 import io.SuccessCSV;
 
 public class FlightBooker extends Agent {
+    public FlightBooker() {
+        this.agentName = "FlightBooker";
+    }
     @Override
     public void handleRequest(CustomerData customerData) {
-        FlightDB obj = FlightDB.getInstance();
-        obj.bookFlight(customerData.flightNumber, customerData.seatCategory, customerData.numberOfSeat);
+        FlightDB.getInstance();
+        FlightDB.bookFlight(customerData.flightNumber, customerData.seatCategory, customerData.numberOfSeat);
         SuccessCSV.write(customerData);
+        leaveSuccess();
     }
 }

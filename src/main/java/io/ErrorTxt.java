@@ -12,10 +12,10 @@ public class ErrorTxt {
     private ErrorTxt(){
         File newFile = new File(filePath);
         try {
-            if (newFile.createNewFile()) {
-                fileHandler = new FileWriter(filePath);
-            } else {
-                System.out.println("Error: File already exists.");
+            if (!newFile.exists() || newFile.delete()) {
+                if (newFile.createNewFile()) {
+                    fileHandler = new FileWriter(filePath);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

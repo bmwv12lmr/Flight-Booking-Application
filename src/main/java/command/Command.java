@@ -1,7 +1,7 @@
 package command;
 
 abstract public class Command{
-    FileHandler fileHandler;
+    protected FileHandler fileHandler;
 
     public Command(FileHandler fileHandler){
         this.fileHandler = fileHandler;

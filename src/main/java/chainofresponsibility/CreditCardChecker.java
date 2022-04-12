@@ -4,17 +4,23 @@ import data.CustomerData;
 
 public class CreditCardChecker extends Agent {
     public CreditCardChecker() {
+        this.agentName = "CreditCardChecker";
         this.reason = "invalid card number";
     }
     @Override
     public void handleRequest(CustomerData customerData) {
         if(checkCreditCard(customerData.paymentCardNumber)) {
-            getNext().handleRequest(customerData);
+            if (getNext() != null) {
+                getNext().handleRequest(customerData);
+            }
+            else {
+                leaveSuccess();
+            }
         } else {
             this.leaveFailed(customerData.bookingName);
         }
     }
-    public boolean checkCreditCard(String paymentCardNumber) {
+    private boolean checkCreditCard(String paymentCardNumber) {
         if(paymentCardNumber.length()<=16 && paymentCardNumber.length()>=13){
             if(paymentCardNumber.length() == 15 &&
                paymentCardNumber.charAt(0) == '3' &&
