@@ -25,6 +25,7 @@ jobs:
     - name: Setup Symfony
       run: |
           pwd
+          ls
           ls src/test/play_ground
           touch src/test/play_ground/git_test.txt
           ls src/test/play_ground
