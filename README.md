@@ -15,18 +15,27 @@ Build a Flight Booking Application to help a list of customers booking flight ti
 >  3. [Calculate] Ticket Price
 >  4. [Validate] Credit Card
 >  5. [Book] Ticket
+4. Three design patterns
 
 ## Report Requirements
 1. Instruction:
->  1. Building the project
->  2. Steps to execute
+  * [Building the project and Steps to execute](#steps-to-execute)
 2. Question:
 >  1. Describe what is the primary problem you try to solve
+>     * The primary problem is how to ensure all classes access the same Output File Handler and Flight Database to prevent duplicate and cause wrong result. In this case, I want to find out a design pattern and the classes can ensure that they always access the same one.
 >  2. Describe what are the secondary problems you try to solve
+>     * The secondary problems is that I want to find out the what is the best design pattern to deal with the chain trivial process in booking the flight ticket.
 >  3. Describe what design pattern(s) you use how (use plain text and diagrams)
+>     * [Desing Pattern](#design-pattern)
 >  4. Describe the consequences of using this/these pattern(s)
+>     * Singleton will keep the same instance in whole runtime, so I need to implement it with thread-safe method to create it only one.
+>     * Chain of Responsibility pattern may sometime leave requests no one handling.
+>     * Command pattern will introduce a layer between sender and receiver which will increase complexity. 
 >  5. Class diagram
+>     * [Class Diagram](#class-relationship)
 3. Screenshots of test execution and result
+  * [Unit Test](#unit-test)
+  * [Execution and Result](#execution-and-result)
 
 ## Input
 1. [CSV] Customer information
@@ -52,3 +61,30 @@ Build a Flight Booking Application to help a list of customers booking flight ti
 >     * Run regression testing for Java classes.
 >  5. make clean
 >     * Remove build and output files.
+
+## Class Relationship
+![Relation](fig/ClassRelation.png)
+
+## Design Pattern
+1. Singleton  
+Only one instance in the problem to prevent duplicate.  
+Implement Flight Database and Output File Handlers with Singleton Design Pattern.  
+![Database](fig/DatabaseSingleton.png)
+![Output Handler](fig/OutputHandlerSingleton.png)
+2. Chain of Responsibility  
+Deal part of the request and send to another agent after it succeed.  
+Implement Airline Agents with Chain of Responsibility Design Pattern. 
+![Agent](fig/AgentChainOfResponsibility.png)
+3. Command  
+Call an invoker and assign them with lots of commands, each commands will do its own job.
+Implement Invoker with Command Design Pattern.  
+![Invoker](fig/InvokerCommand.png)
+
+## Unit Test
+Tool: Junit 5  
+Total Unit Test: 24  
+![TestPassed]()
+
+## Execution and Result
+![Execution]()  
+![Result]()  
