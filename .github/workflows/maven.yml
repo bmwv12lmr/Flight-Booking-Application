@@ -25,6 +25,9 @@ jobs:
     - name: Setup Symfony
       run: |
           pwd
+          ls src/test/play_ground
+          touch src/test/play_ground/git_test.txt
+          ls src/test/play_ground
           echo "Hello World"
     - name: Compile and Build Maven
       run: mvn compile
