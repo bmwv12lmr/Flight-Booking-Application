@@ -15,10 +15,10 @@ class SeatCheckerTest {
     void handleRequest() {
         CustomerData data = new CustomerData();
         data.bookingName = "Sam";
-        data.flightNumber = "SJ456";
+        data.flightNumber = "CA453";
         data.seatCategory = "Economy";
         data.numberOfSeat = 2;
-        data.totalPrice = 500;
+        data.totalPrice = 600;
 
         FlightDB.setFilePath("src/test/data/flights.csv");
         FlightDB.getInstance();
