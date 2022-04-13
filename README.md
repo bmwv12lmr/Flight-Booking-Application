@@ -32,7 +32,7 @@ Build a Flight Booking Application to help a list of customers booking flight ti
 >     * Chain of Responsibility pattern may sometime leave requests no one handling.
 >     * Command pattern will introduce a layer between sender and receiver which will increase complexity. 
 >  5. Class diagram
->     * [Class Diagram](#class-relationship)
+>     * [Class Diagram](#class-diagram)
 3. Screenshots of test execution and result
   * [Unit Test](#unit-test)
   * [Execution and Result](#execution-and-result)
@@ -62,8 +62,8 @@ Build a Flight Booking Application to help a list of customers booking flight ti
 >  5. make clean
 >     * Remove build and output files.
 
-## Class Relationship
-![Relation](fig/ClassRelation.png)
+## Class Diagram
+![Class Diagram](fig/ClassRelation.png)
 
 ## Design Pattern
 1. Singleton  
