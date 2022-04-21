@@ -2,6 +2,7 @@
 *[Spring '22] CMPE-202: Software Systems Engineering*  
 **Professor: Gopinath Vinodh**  
 **Student: Allen Wu**  
+Project Repository: https://github.com/gopinathsjsu/individual-project-bmwv12lmr  
 
 ## Objective
 Build a Flight Booking Application to help a list of customers booking flight tickets.
@@ -91,6 +92,7 @@ Implement Invoker with Command Design Pattern.
 ## Unit Test
 Tool: Junit 5  
 Total Unit Test: 24  
+  
 **Unit Test in the Project**  
 ![UnitTestFile](fig/UnitTest.png)  
 **Passed All Unit Test**  
