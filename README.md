@@ -60,11 +60,15 @@ Build a Flight Booking Application to help a list of customers booking flight ti
 >  4. make test
 >     * Run regression testing for Java classes.
 >  5. make clean
->     * Remove build and output files.
->  ![Makefile](fig/Makefile.png)  
+>     * Remove build and output files.  
+
+**Makefile Detail**
+![Makefile](fig/Makefile.png)  
 * Github CI
->  ![JavaCI](fig/JavaCI.png)  
->  ![MakefileCI](fig/MakefileCI.png)  
+  1. Java CI
+  ![JavaCI](fig/JavaCI.png)  
+  2. Makefile CI  
+  ![MakefileCI](fig/MakefileCI.png)  
 
 ## Class Diagram
 ![Class Diagram](fig/ClassRelation.png)
@@ -86,11 +90,16 @@ Implement Invoker with Command Design Pattern.
 
 ## Unit Test
 Tool: Junit 5  
-Total Unit Test: 24
-![UnitTestFile](fig/UnitTest.png)
+Total Unit Test: 24  
+**Unit Test in the Project**  
+![UnitTestFile](fig/UnitTest.png)  
+**Passed All Unit Test**  
 ![TestPassed](fig/TestSuccess.png)
 
 ## Execution and Result
+**Run Program with Test Input**  
 ![Execution](fig/RunSuccess.png)  
-![CsvResult](fig/OutputCsvComparison.png)
+**Identical CSV Result**  
+![CsvResult](fig/OutputCsvComparison.png)  
+**Identical Txt Result**  
 ![TxtResult](fig/OutputTxtComparison.png)  
